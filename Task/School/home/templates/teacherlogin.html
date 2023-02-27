@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<style>
+  body {
+    background: #d9d9d9;
+    font-family: sans-serif;
+  }
+
+.login-box {
+    width: 280px;
+    height: 380px;
+    background: #ffffff;
+    color: #000000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+  }
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+.login-box p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+
+.login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000000;
+    font-size: 16px;
+  }
+
+.login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+
+.login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #2ecc71;
+    color: #ffffff;
+  }
+</style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="user.png" class="avatar">
+    <h1>Login Here</h1>
+    <form action="/teacherlogin/" method="post">
+	  {% csrf_token %}
+	
+	  <p>Email</p>
+	  <input type="text" class="form-control" id="email" name="email" placeholder="Enter email" required>
+      <p>Password</p>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+      <input type="submit" name="submit" value="Login">
+    </form>
+    <div class="card-footer text-center">
+            <a href="#">Forgot password?</a>
+    </div>
+  </div>
+</body>
+</html>

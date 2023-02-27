@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Landing Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Add custom CSS styles here -->
+    <style>
+      /* Custom CSS styles go here */
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #F5ECF7;
+      }
+      .jumbotron {
+        background-color: #E3E3F3;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .jumbotron h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+      .jumbotron p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .btn-primary {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+      }
+      .features {
+        background-color: #F5ECF7;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+      }
+      .features h2 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+      }
+      .features p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .feature {
+        margin-bottom: 3rem;
+      }
+      .feature h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .feature p {
+        font-size: 1.2rem;
+      }
+      .footer {
+        background-color: #333;
+        color: #5A1A6A;
+        padding: 3rem 0;
+        text-align: center;
+      }
+      .footer p {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Welcome to Dashboard</h1>
+        <p class="lead">All details of Admin, Student, Teacher related courses</p>
+        <a href="{% url 'signup' %}" class="btn btn-primary">Admin</a>
+        <a href="{% url 'studentsignup' %}" class="btn btn-primary">Student</a>
+        <a href="{% url 'teachersignup' %}" class="btn btn-primary">Teacher</a>
+        </div>
+    </div>
+    
+    <div class="features">
+      <div class="container" style="color:#180E56">
+        <h2>Our Features</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="row">
+          <div class="col-md-4" style="color:#180E56">
+            <div class="feature">
+              <h3>Admin Feature</h3>
+              <h4>Admin Feature is to access all images of Student and Teacher</h4>
+            </div>
+          </div>
+          <div class="col-md-4" style="color:#180E56">
+            <div class="feature">
+              <h3>Student Feature</h3>
+              <h4>Student Feature is to add images and courses</h4>
+            </div>
+		  </div>
+		  <div class="col-md-4" style="color:#180E56">
+            <div class="feature">
+              <h3>Teacher Feature</h3>
+              <h4>Teacher Feature is to access images of Student and Self images</h4>
+            </div>
+          </div>
+        </div>
+	 </div>
+    </div>
